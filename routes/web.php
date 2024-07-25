@@ -2,9 +2,13 @@
 
 use Illuminate\Support\Facades\Route;
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+
 use App\Http\Controllers\BookController;
+
+
+// Redirect root URL to /books
+Route::get('/', function () {
+    return redirect('/books');
+});
 
 Route::get('/books', [BookController::class, 'index']);
