@@ -8,6 +8,7 @@ use App\Http\Controllers\BookController;
 
 // Redirect root URL to /books
 Route::get('/', function () {
+
     return redirect('/books');
 });
 
